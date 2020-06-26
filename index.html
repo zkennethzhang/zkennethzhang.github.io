@@ -1,73 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<link rel="stylesheet" href="style.css">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Kenenth Zhang | Homepage</title>
-	<meta name="description" content="Hi, my name is Kenneth Zhang and welcome to my personal website. I am originally from Diamond Bar, California. However, I currently live in Los Angeles to attend school at USC. I am currently a junior majoring in Economics, but I am also trying to get a minor in Data Science. As an economics major my goal was always to one day pursue a career in finance, however over the past year I have realized that I want to pursue a career in brand licensing instead. I am interested in brand management because I want to be able to focus on solving complicated and creative problems. So if you have any openings or job offers like that, I would love to hear them! Thank you!">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<style>
+	<title>Kenneth Zhang</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="A personal website about me which will include my past work, experiences, and goals.">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+    <style>
+		body, html{
+			height: 100%;
+			margin: 0px;
+			padding-right: 0px;
+			font-family: 'Raleway', Arial, sans-serif;
+			line-height: 1.24;
+
+		}
+		h1{
+			margin: 0;
+			text-align: center;
+			font-size: 90pt;
+			color: white;
+			display: none;
+		}
+		h2{
+			text-align: center;
+			font-size: 50px;
+			margin-bottom: 50px;
+			margin-top: 0px;
+		}
+		.bgImg{
+			background-attachment: fixed;
+   	 		background-position: center;
+   			background-repeat: no-repeat;
+  			background-size: cover;
+   		}
+		#bg1{
+			min-height: 100%;
+			background-image: url("https://images.unsplash.com/photo-1541531455306-a1008c85edd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+			position: relative;	
+			height: 100%;		
+		}
+		#bg2{
+			height: 23%;
+			width: 100%;
+			background-image: url("https://www.californiabeaches.com/wp-content/uploads/2014/09/bigs-Malibu-Pier-from-north-before-sunset-blue-sky-161180849-Large-e1486591588363.jpg");
+			color:white;
+			margin: 0px;
+			padding-top: 7%;
+		}
+		#bg3{
+			height: 23%;
+			width: 100%;
+			background-image: url("https://ihitthebutton.com/wp-content/uploads/2018/08/Golden-Gate-Bridge-View-at-Baker-Beach-cropped.jpg");
+			color:white;
+			margin: 0px;
+			padding-top: 7%;
+		}
+		#name{
+			position: absolute;
+			top:60%;
+			left: 3%;
+			text-shadow: 3px 3px 3px black;
+			opacity: 85%;
+			width: 50%;
+		}
+		.navbar{
+			position: fixed;
+			z-index: 1;
+			top:0px;
+			right: 0;
+			width: 35%;
+			min-width: 250px;
+		}
+
+		.navbar a{
+			margin:0px;
+			padding: 2% 3.2%;
+			text-decoration: none;
+			font-size: 15pt;
+			color: black;
+			float: right;
+			text-align: center;
+			width: 17%;
+			display: none;
+			transition: background-color 1s ease-out;
+		}
+		#exp{
+			width: 22%;
+		}
+		.navbar a:hover{
+			color: #5c5c5c;
+		}
+		#aboutheading{
+			width: 100%;
+		}
+		.section{
+			padding-top: 6%;
+			overflow: auto;
+			padding-bottom: 9%;
+		}
+		#about{
+			background-color: #7897b5;
+		}
+		#aboutcont{
+			width: 85%;
+			margin: auto;
+			height: 76%;
+		}
+		#abouttext{
+			width: 46%;
+			padding:5%;
+			font-family: 'Open Sans', Arial, sans-serif;
+			float: left;
+			background-color: #bfd0db;
+			text-align: center;
+			line-height: 1.55;
+		}
+
+		}
+		#abouttext div{
+			display: inline;
+			font-size: 220%;
+		}
+		.classes{
+			text-align: left;
+			width: 80%;
+		}
+		#aboutimg{
+			width:32%;
+			float: 5px;
+			display: inline;
+
+		}
+		#experience{
+			background-color:	#a7d8e3;
+			text-align: center;
+			color:white;
+			padding-bottom: 3%;
+		}
+		#experienceCont{
+			width: 86%;
+			margin: auto;
+			overflow: visible;
+		}
+		.experienceSec{
+			padding: 1.5% 3%;
+			float: left;
+			width: 40.5%;
+			margin: 1% 1%;
+			border: 4px solid white;
+			position: relative;
+			overflow: hidden;
+			
+		}
+		.experienceSec .overlay{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			padding-top: 5%;
+			opacity: 0;
+			background-color:#aec0cd;	
+;
+			
+			transform: scale(1.2);
+			transition: all 0.7s 0s;
+			padding-top:1%;
+		}
+		.experienceSec:hover .overlay{
+			transform: scale(1);
+			opacity: 1;
+		}
+		.date{
+			margin: 2%;
+		}
+		#resume{
+			width: 20%;
+			margin:auto;
+			margin-top: 2%;
+			margin-bottom: 0.7%;
+			text-align: center;
+			transition: all 0.3s 0s;
+		}
+		#resume:hover{
+			transform: scale(1.1);
+		}
+		#resume a{
+			color: white;
+			text-decoration: none;
+		}
+		#soon{
+			margin-top: 13%;
+		}
+		.contact{
+			background-color: #bcc7d2;
+			padding-top: 2.5%;
+			padding-bottom: 2%;
+		}
+		ul{
+			text-align: left;
+			margin:3%;
+		}
+		.bgblue{
+			border-color: white;
+		}
+		.clearFloat{
+			clear: both;
+		}
+		#contactCont{
+			width: 50%;
+			margin: 1% auto;
+			padding: 2%;
+			padding-bottom: 1.5%;
+			background-color: #bcc7d2;
+		}
+		#message{
+			color: #3f4142;
+			width: 80%;
+			margin: 1% auto;
+		}
+		#message h2{
+			margin: 1%;
+		}
+		#message h3{
+			margin-top: 1%;
+			text-align: center;
+		}
+		.messageIn input, textarea{
+			float: left;
+			font-size: 100%;
+			font-family: 'Raleway', Arial, sans-serif;
+			padding:0.5%;
+			border: none;
+			color: #f5efeb;
+		}
+		.messageIn{
+			background-color: blue;
+		}
+		#mail{
+			width: 63%;
+			margin: 0px auto;
+		}
+		.half input{
+			width: 40%;
+			padding: 1.8%;
+			margin: 1% 3%;
+		}
+		.full textarea{
+			width: 89.5%;
+			padding: 1.8%;
+			margin: 3% 3%;
+			resize: none;
+		}
+		#footer{
+			padding:1.5%;
+			background-color:#6e6a6a;
+			text-align: center;
+			color:white;
+			border-top: 2px solid white;
+		}
+		#buttonCont{
+			text-align: center;
+			margin: auto;
+		}
+
+		#buttonCont button{
+			border:none;
+			background-color: white;
+			font-family: 'Raleway', Arial, sans-serif;
+			font-size: 100%;
+			padding:2% 4%;
+			padding-left: 3%;
+		}
+		#links{
+			margin:0% auto;
+			margin-top: 3%;
+			opacity: 0.6;
+			text-align: center;
+		}
+		#links img{
+			width: 3.5%;
+			height: auto;
+			margin: 0.5%;
+			margin-top: 0.1%;
+			transition: all 0.1s 0s;
+		}
+		#links img:hover{
+			transform: scale(1.1);
+		}
+		.come-in {
+		  transform: translateY(150px);
+		  animation: come-in 1.5s ease forwards;
+		}
+		.come-in:nth-child(odd) {
+		  animation-duration: 1s; 
+		}
+		@keyframes come-in {
+		  to { transform: translateY(0); }
+		}
 	</style>
 </head>
 <body>
-	<div id="nav">
-		<a href="#about-me">ABOUT ME</a>
-		<a href="#resume">RESUME</a>
-		<a href="#contact">CONTACT</a>
+	<div class="navbar">
+		<a href="#name">HOME</a>
+		<a href="#experienceCont">EXPERIENCE</a>
+		<a href="#message">CONTACT</a>
+		<a href="#aboutheading">ABOUT</a>
 	</div>
-	<div class="main_img" id="img_1">
-		<div class="name">
+	<div class="bgImg" id="bg1">
+		<div id="name">
 			<h1>KENNETH ZHANG</h1>
 		</div>
 	</div>
-	<div class="clearfloat"></div>
-	<div id="about-me">
-		<h2>About Me</h2>
-		<div id="paragraph">
-			<img src="img_folder/san_diego.jpg" alt="first-photo">
-			<img src="img_folder/salt_institute.jpg" alt="musuem">
-			<img src="img_folder/resume_photo.jpg" alt="third-photo">
+	<div id="about" class="section">
+		<div id='aboutheading'>
+			<h2>ABOUT ME</h2>
 		</div>
-			<p>My name is Kenneth Zhang and I am originally from Diamond Bar, California and I currently live in Los Angeles to attend school at USC. I am currently a junior majoring in Economics and I hope to one day do brand marketing or brand strategy for a major technology company or entertainment firm. I have taken a variety of classes during my time at USC and learned a lot of skills. For instance I learned how to program in Python, SQL, MongoDB, HTML, and CSS. In addition to that, I also took a variety of entertainment courses including Art and Industry of Theatrical Film and Managing Television Studios Internet Media. I hope to one day be able to utilize these skills as a brand strategist or marketing leader. In this past summer I worked as a licensing intern at Seltzer Licensing Group, and I got to work with a wide variety of clients inclduing NBC, Airheads, and Breyers Ice Cream. In my free time I like to listen to music or going backpacking!</p>
-			<br>
-		<iframe class="spotify" src="https://open.spotify.com/embed/track/6Od2OWvoT4embWAgIGeFRd" width="200" height="280" allow="encrypted-media"></iframe>
+		<div id="aboutcont">
+			<div class="module" id="abouttext">
+				<p>Hi! My name is Kenneth Zhang.</p>
+				<p>I'm currently a rising senior studying Economics and minoring in Applied Analytics at the University of Southern California. I'm really interested in Business Analytics and Data Science. I also recently got into web development, and I love it!</p>
+				<p>Some of the classes I've taken at USC include Programming in Python, Introduction to Data Analytics, Econometric Statistics, and I am Web Development. I'm also in USC Data Science Club, a club on campus where members learn new programming language and participate in coding competiotns!</p>
+				<p> Some of my hobbies include learning new instruments and traveling! I am currently learning how to play the drums, and I hope to travel to Asia next year!</p>
+			</div>
+				<img id="aboutimg" src="img_folder/photo.jpg" alt="first-photo">
+
+		</div>
+		
 	</div>
-	<div class="clearfloat">
-	<div id="resume">
-		<h2>Resume</h2>
-		<embed type="application/pdf" src="img_folder/resume.pdf" style="width: 800px; height: 420px;">
-		<h3>Clients I've Worked With</h3>
-		<img src="img_folder/clients.jpg" alt="experience">
+	<div class="bgImg" id="bg2">
+		<div>
+			<h2>EXPERIENCE</h2>
+		</div>
 	</div>
+	<div id="experience" class="section">
+		<div id="experienceCont">
+			<div class="module experienceSec">
+				<h3>Seltzer Licensing Group</h3>
+				<h4>Licensing Intern</h4>
+				<div class="overlay">
+					<h4 id="date"> Jun. 2019 - Aug.2019 | El Segundo, CA</h4>
+					<ul>
+					<li>Assisted managers with financial projections by doing calculations for a $20 million company. </li>
+					<li>Evaluated and organized pitch decks, financial plans, and product designs from potential clients.
+					</ul>
+				</div>
+			</div>
+			<div class="module experienceSec">
+				<h3>USC MBA PM Office</h3>
+				<h4>Student Worker</h4>
+				<div class="overlay">
+					<h4 class="date">May. 2019 - Present | Los Angeles, CA</h4>
+					<ul>
+						<li>Answered phone calls, emails, and organized over 10,000 student files</li>
+						<li>Organized and recorded the attendance for events such as Career Fairs and meet the firms. </li>
+						<li>Helped manage and organize the budget for reimbursements, purchase orders, and check requests.</li>
+					</ul>
+				</div>
+					
+			</div>
+			<div class="module experienceSec">
+				<h3>USC Data Science Club</h3>
+				<h4>Programmer</h4>
+				<div class="overlay">
+					<h4 class="date"> Aug. 2019 - Present | Los Angeles, CA</h4>
+					<ul>
+						<li>Taught coding languages and other skills such as Python, SQL, and HTML during weekly meetings.</li>
+						<li>Organized and participated in event such as coding workshops and competitions such as Data Fest.</li>
+						<li>Helped write event evaluations and attendance reports after each event.</li>
+					</ul>
+				</div>
+					
+			</div>
+			<div class="module experienceSec">
+				<h3>USC Speakers Committee</h3>
+				<h4>Assistant Diretor</h4>
+				<div class="overlay">
+					<h4 class="date">Aug. 2019 - Present | Los Angeles, CA</h4>
+					<ul>
+						<li>Oversaw the allocation of a $110,000 budget, while working collaboratively with our co-sponsors.</li> 
+						<li>Coordinate logistics and correspondence for events with over 1,200 attendees. </li>
+						<li>Assisted with the planning and execution of speaking events featuring figures such as Queer Eye, Kareem Abdul-Jabbar, and Samantha Power. </li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearFloat"></div>
+			<h5 id="resume"><a href="Resume.pdf">Link to my resume</a></h5>
+		</div>
 	</div>
-	<div class="clearfloat"></div>
-	<div id="contact">
-		<h2> Any Questions? Feel Free To Contact Me! </h2>
-		<a href="https://www.linkedin.com/in/kenneth-zhang-1b56a4168/"><i class="fab fa-linkedin fa-2x path "></i><img src="img_folder/photo_first.png" alt="linkedin_photo"></a>
-		<a href="https://www.instagram.com/kennnyz_/"><i class="fab fa-instagram fa-2x path "></i><img src="img_folder/photo_second.png" alt="instagram_photo"></a>
-		<a href="https://www.facebook.com/kenneth.zhang.18/"><i class="fab fa-facebook fa-2x path "></i><img src="img_folder/third_photo.png" alt="facebook_photo"></a>
-		<br>
-		<br>
-			<h2>Send Me A Message</h2>
-			<form action="Confirmation_Page.html">
-			<label for="contact-name">Name:</label>
-		<input type="text" id="contact-name">
-		<br>
-		<br>
-		<label for="contact-email">Email:</label>
-		<textarea id="contact-email" placeholder="tommytrojan@us.edu"></textarea>
-		<br>
-		<br>
-		<label for="phone-number">Phone Number:</label>
-		<textarea id="phone-number" placeholder="(451)-542-6545"></textarea>
-		<br>
-		<br>
-		<textarea placeholder="Message" rows="4" cols="60" id="textbox"></textarea>
-		<br>
-		<br>
-		<button type="submit" id="submit-id" onclick="contactconfirmation.html">Send Message</button>
-		<p>© 2020 Kenneth Zhang</p>
-	</form>
+	<div class="bgImg" id="bg3">
+		<div>
+			<h2 id="contact">CONTACT</h2>
+		</div>
 	</div>
+	<div class="section contact">
+		<div id="contactCont">
+		<div id="message">
+			<h2 >Send me a message!</h2>
+
+		</div>
+		<div id="mail">
+			<form action="mailto:zkennethzhang@gmail.com" method="post" enctype="text/plain">
+				<div class="messageIn half">
+	            	<input type="text" placeholder="Name" required>
+	         	</div>
+				<div class="messageIn half">
+	            	<input type="text" placeholder="Email" required>
+	         	</div>
+	         	<div class="messageIn full">
+					<textarea rows="4" placeholder="Message" required name="Message"></textarea>
+				</div>
+				<div class="clearFloat"></div>
+				<div id="buttonCont">
+					<button type="submit"><i class="fas fa-paper-plane"></i>   Send</button>
+				</div>
+			</form>
+		</div>
+		<div id="links">
+			<a href="https://www.linkedin.com/in/kenneth-zhang-1b56a4168/"><i class="fab fa-linkedin fa-2x path "></i></a>
+			<a href="https://www.instagram.com/kennnyz_/"><i class="fab fa-instagram fa-2x path "></i></a>
+			<a href="https://www.facebook.com/kenneth.zhang.18/"><i class="fab fa-facebook fa-2x path "></i></a>
+		</div>
+		</div>
+	</div>
+	<div class="clearFloat"></div>
+	<div id="footer">
+		<div>&copy; 2020 Kenneth Zhang</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+    <script src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+	<script src="flowtype.js"></script>
+	<script src="jquery.visible.js"></script>
+	<script src="script.js"></script>
 </body>
+
 </html>
